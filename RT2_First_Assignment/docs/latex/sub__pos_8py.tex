@@ -1,0 +1,110 @@
+\hypertarget{sub__pos_8py}{}\doxysection{scripts/sub\+\_\+pos.py File Reference}
+\label{sub__pos_8py}\index{scripts/sub\_pos.py@{scripts/sub\_pos.py}}
+
+
+This package implements the position subscriber.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sub__pos_8py_a69ff78e2b0040ebb1879068c13e808e6}\label{sub__pos_8py_a69ff78e2b0040ebb1879068c13e808e6}} 
+def {\bfseries sub\+\_\+pos.\+subscriber} (data)
+\item 
+\mbox{\Hypertarget{sub__pos_8py_a6fe6c8bdfce56e4bbfe62cb14ffd7ff3}\label{sub__pos_8py_a6fe6c8bdfce56e4bbfe62cb14ffd7ff3}} 
+def {\bfseries sub\+\_\+pos.\+print\+\_\+vel} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sub__pos_8py_a98d27585378152576b58645506cb6d30}\label{sub__pos_8py_a98d27585378152576b58645506cb6d30}} 
+int {\bfseries sub\+\_\+pos.\+counter} = 0
+\item 
+\mbox{\Hypertarget{sub__pos_8py_a4bfb63f190ff18b5bda4cc2b9191c463}\label{sub__pos_8py_a4bfb63f190ff18b5bda4cc2b9191c463}} 
+int {\bfseries sub\+\_\+pos.\+vel} = 0
+\item 
+\mbox{\Hypertarget{sub__pos_8py_a0b20462032ebced07f744c3cafd57035}\label{sub__pos_8py_a0b20462032ebced07f744c3cafd57035}} 
+int {\bfseries sub\+\_\+pos.\+avg\+\_\+vel} = 0
+\item 
+\mbox{\Hypertarget{sub__pos_8py_aba1a157187b4359329e1be495df9f1b3}\label{sub__pos_8py_aba1a157187b4359329e1be495df9f1b3}} 
+int {\bfseries sub\+\_\+pos.\+dist} = 0
+\item 
+\mbox{\hyperlink{sub__pos_8py_a133255f33ab1324b913831b78cdb6321}{sub\+\_\+pos.\+des\+\_\+x}} = rospy.\+get\+\_\+param(\char`\"{}/des\+\_\+pos\+\_\+x\char`\"{})
+\begin{DoxyCompactList}\small\item\em Subscriber function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sub__pos_8py_a109f307babf9f5d1f31352a9032cea36}\label{sub__pos_8py_a109f307babf9f5d1f31352a9032cea36}} 
+{\bfseries sub\+\_\+pos.\+des\+\_\+y} = rospy.\+get\+\_\+param(\char`\"{}/des\+\_\+pos\+\_\+y\char`\"{})
+\item 
+\mbox{\Hypertarget{sub__pos_8py_a9c4df62152720fe956dd22cc8a6c9a79}\label{sub__pos_8py_a9c4df62152720fe956dd22cc8a6c9a79}} 
+{\bfseries sub\+\_\+pos.\+curr\+\_\+x} = data.\+x
+\item 
+\mbox{\Hypertarget{sub__pos_8py_a664925e527f72637e5190d600d14e6dc}\label{sub__pos_8py_a664925e527f72637e5190d600d14e6dc}} 
+{\bfseries sub\+\_\+pos.\+curr\+\_\+y} = data.\+y
+\item 
+\mbox{\Hypertarget{sub__pos_8py_ae35c40dc71fed424d5de5a8b26b973eb}\label{sub__pos_8py_ae35c40dc71fed424d5de5a8b26b973eb}} 
+{\bfseries sub\+\_\+pos.\+curr\+\_\+vel\+\_\+x} = data.\+vel\+\_\+x
+\item 
+\mbox{\Hypertarget{sub__pos_8py_a668bd2d13c5322c109172ac20ec764dc}\label{sub__pos_8py_a668bd2d13c5322c109172ac20ec764dc}} 
+{\bfseries sub\+\_\+pos.\+curr\+\_\+vel\+\_\+y} = data.\+vel\+\_\+y
+\item 
+\mbox{\Hypertarget{sub__pos_8py_ad05352c789e36d8148e5415d3719e40c}\label{sub__pos_8py_ad05352c789e36d8148e5415d3719e40c}} 
+{\bfseries sub\+\_\+pos.\+curr\+\_\+vel} = math.\+sqrt((curr\+\_\+vel\+\_\+x$\ast$$\ast$2)+(curr\+\_\+vel\+\_\+y$\ast$$\ast$2))
+\item 
+\mbox{\hyperlink{sub__pos_8py_a128d96523c3a29dddf53507977ea4593}{sub\+\_\+pos.\+rate}} = rospy.\+Rate(rospy.\+get\+\_\+param(\textquotesingle{}/frequency\textquotesingle{}))
+\begin{DoxyCompactList}\small\item\em Print current velocity function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sub__pos_8py_a3caae06a5dde1da3a418ab19780e54e6}\label{sub__pos_8py_a3caae06a5dde1da3a418ab19780e54e6}} 
+{\bfseries sub\+\_\+pos.\+file}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This package implements the position subscriber. 
+
+\begin{DoxyAuthor}{Author}
+Emanuele Giordano -\/ \href{mailto:4479444@studenti.unige.it}{\texttt{ 4479444@studenti.\+unige.\+it}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+29/01/2025
+\end{DoxyDate}
+This package implements the subscriber node of the robot, which acquires the robot\textquotesingle{}s position and velocity, as well as the desired target position. Then it computes the correct acceleration in order to drive the robot towards the target. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sub__pos_8py_a133255f33ab1324b913831b78cdb6321}\label{sub__pos_8py_a133255f33ab1324b913831b78cdb6321}} 
+\index{sub\_pos.py@{sub\_pos.py}!des\_x@{des\_x}}
+\index{des\_x@{des\_x}!sub\_pos.py@{sub\_pos.py}}
+\doxysubsubsection{\texorpdfstring{des\_x}{des\_x}}
+{\footnotesize\ttfamily sub\+\_\+pos.\+des\+\_\+x = rospy.\+get\+\_\+param(\char`\"{}/des\+\_\+pos\+\_\+x\char`\"{})}
+
+
+
+Subscriber function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data,position} & and velocity vector of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function commands the velocity of the robot based on the current cartesian distance to the target position. \mbox{\Hypertarget{sub__pos_8py_a128d96523c3a29dddf53507977ea4593}\label{sub__pos_8py_a128d96523c3a29dddf53507977ea4593}} 
+\index{sub\_pos.py@{sub\_pos.py}!rate@{rate}}
+\index{rate@{rate}!sub\_pos.py@{sub\_pos.py}}
+\doxysubsubsection{\texorpdfstring{rate}{rate}}
+{\footnotesize\ttfamily sub\+\_\+pos.\+rate = rospy.\+Rate(rospy.\+get\+\_\+param(\textquotesingle{}/frequency\textquotesingle{}))}
+
+
+
+Print current velocity function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This fucntion prints the distance from the gosl and the average velocity, at the desired frequency. 

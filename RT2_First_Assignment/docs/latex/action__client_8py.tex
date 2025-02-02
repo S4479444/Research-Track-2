@@ -1,0 +1,117 @@
+\hypertarget{action__client_8py}{}\doxysection{scripts/action\+\_\+client.py File Reference}
+\label{action__client_8py}\index{scripts/action\_client.py@{scripts/action\_client.py}}
+
+
+This node implements the robot\textquotesingle{}s action client.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{action__client_8py_ab4e4cdfff91b6c8ad7e2e46860bf6fa6}\label{action__client_8py_ab4e4cdfff91b6c8ad7e2e46860bf6fa6}} 
+def {\bfseries action\+\_\+client.\+G\+UI} ()
+\item 
+\mbox{\Hypertarget{action__client_8py_ab4a638be61ae795c4ad553d3e8e9b609}\label{action__client_8py_ab4a638be61ae795c4ad553d3e8e9b609}} 
+def {\bfseries action\+\_\+client.\+choose\+\_\+goal} ()
+\item 
+\mbox{\Hypertarget{action__client_8py_a6a672c9010c00ac71fee1eaa3310b741}\label{action__client_8py_a6a672c9010c00ac71fee1eaa3310b741}} 
+def {\bfseries action\+\_\+client.\+cancel\+\_\+cmd} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{action__client_8py_ae1444da3d50a5fa4ea3ccabbd4c0245b}{action\+\_\+client.\+usr\+\_\+input}} = input(\char`\"{}-\/ -\/-\/$>$ \char`\"{})
+\begin{DoxyCompactList}\small\item\em This is the Graphical User Interface, called at any moment in order to have real-\/time control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{action__client_8py_aa005a529056b698a150658e4d1e0bde0}{action\+\_\+client.\+goal\+\_\+x}} = int(input(\char`\"{}-\/ x -\/-\/$>$ \char`\"{}))
+\begin{DoxyCompactList}\small\item\em Function to choose the goal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{action__client_8py_a703167eff7f24321b63334c7b7544afa}\label{action__client_8py_a703167eff7f24321b63334c7b7544afa}} 
+{\bfseries action\+\_\+client.\+goal\+\_\+y} = int(input(\char`\"{}-\/ y -\/-\/$>$ \char`\"{}))
+\item 
+\mbox{\Hypertarget{action__client_8py_af1c77c6ce07836ed95801b16bccbc60b}\label{action__client_8py_af1c77c6ce07836ed95801b16bccbc60b}} 
+{\bfseries action\+\_\+client.\+des\+\_\+goal} = Pose\+Stamped()
+\item 
+\mbox{\Hypertarget{action__client_8py_ac1c3e317f5609a25a8d6f73795cafc11}\label{action__client_8py_ac1c3e317f5609a25a8d6f73795cafc11}} 
+{\bfseries action\+\_\+client.\+x}
+\item 
+\mbox{\Hypertarget{action__client_8py_a85ebb83e7579c2cd4668dc28edbbc83d}\label{action__client_8py_a85ebb83e7579c2cd4668dc28edbbc83d}} 
+{\bfseries action\+\_\+client.\+y}
+\item 
+\mbox{\Hypertarget{action__client_8py_a270d8e3f8b3b1da50c1622d4ea52064c}\label{action__client_8py_a270d8e3f8b3b1da50c1622d4ea52064c}} 
+{\bfseries action\+\_\+client.\+msg\+\_\+goal} = assignment\+\_\+2\+\_\+2022.\+msg.\+Planning\+Goal(des\+\_\+goal)
+\item 
+\mbox{\hyperlink{action__client_8py_ac0e8ecaac208737bec65dfb9943e483c}{action\+\_\+client.\+action\+\_\+client}} = actionlib.\+Simple\+Action\+Client(\textquotesingle{}/reaching\+\_\+goal\textquotesingle{}, assignment\+\_\+2\+\_\+2022.\+msg.\+Planning\+Action)
+\begin{DoxyCompactList}\small\item\em Function for canceling previous commands. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{action__client_8py_aaf748f6d512028463191f7ea212cdede}\label{action__client_8py_aaf748f6d512028463191f7ea212cdede}} 
+{\bfseries action\+\_\+client.\+file}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node implements the robot\textquotesingle{}s action client. 
+
+\begin{DoxyAuthor}{Author}
+Emanuele Giordano -\/ \href{mailto:4479444@studenti.unige.it}{\texttt{ 4479444@studenti.\+unige.\+it}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+29/01/2025
+\end{DoxyDate}
+This node implements both the graphical user interface (G\+UI) and the action client node of the robot. In particular, the action client handles the behavour of the robot, based on the user\textquotesingle{}s input, between choosing a specified goal position (x,y), or canceling any previous command and stopping the robot. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{action__client_8py_ac0e8ecaac208737bec65dfb9943e483c}\label{action__client_8py_ac0e8ecaac208737bec65dfb9943e483c}} 
+\index{action\_client.py@{action\_client.py}!action\_client@{action\_client}}
+\index{action\_client@{action\_client}!action\_client.py@{action\_client.py}}
+\doxysubsubsection{\texorpdfstring{action\_client}{action\_client}}
+{\footnotesize\ttfamily action\+\_\+client.\+action\+\_\+client = actionlib.\+Simple\+Action\+Client(\textquotesingle{}/reaching\+\_\+goal\textquotesingle{}, assignment\+\_\+2\+\_\+2022.\+msg.\+Planning\+Action)}
+
+
+
+Function for canceling previous commands. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function is called whenever the user selected (2) on the G\+UI; it deletes the last goal sent to the robot. \mbox{\Hypertarget{action__client_8py_aa005a529056b698a150658e4d1e0bde0}\label{action__client_8py_aa005a529056b698a150658e4d1e0bde0}} 
+\index{action\_client.py@{action\_client.py}!goal\_x@{goal\_x}}
+\index{goal\_x@{goal\_x}!action\_client.py@{action\_client.py}}
+\doxysubsubsection{\texorpdfstring{goal\_x}{goal\_x}}
+{\footnotesize\ttfamily action\+\_\+client.\+goal\+\_\+x = int(input(\char`\"{}-\/ x -\/-\/$>$ \char`\"{}))}
+
+
+
+Function to choose the goal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This function is called whenever the user selected (1) on the G\+UI; it prints the G\+UI section for choosing the (x,y) coordinates from console. It has no input nor output and serves also the purpouse of sending to the server that (x,y) point selected by user. \mbox{\Hypertarget{action__client_8py_ae1444da3d50a5fa4ea3ccabbd4c0245b}\label{action__client_8py_ae1444da3d50a5fa4ea3ccabbd4c0245b}} 
+\index{action\_client.py@{action\_client.py}!usr\_input@{usr\_input}}
+\index{usr\_input@{usr\_input}!action\_client.py@{action\_client.py}}
+\doxysubsubsection{\texorpdfstring{usr\_input}{usr\_input}}
+{\footnotesize\ttfamily action\+\_\+client.\+usr\+\_\+input = input(\char`\"{}-\/ -\/-\/$>$ \char`\"{})}
+
+
+
+This is the Graphical User Interface, called at any moment in order to have real-\/time control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}

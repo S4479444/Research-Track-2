@@ -1,0 +1,68 @@
+\hypertarget{custom__msg_8py}{}\doxysection{scripts/custom\+\_\+msg.py File Reference}
+\label{custom__msg_8py}\index{scripts/custom\_msg.py@{scripts/custom\_msg.py}}
+
+
+This node implements the message publisher.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{custom__msg_8py_adc9847de4bb07d73bc5ba721ee78a688}\label{custom__msg_8py_adc9847de4bb07d73bc5ba721ee78a688}} 
+def {\bfseries custom\+\_\+msg.\+pub} (message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{custom__msg_8py_abc08a89c26f518f035a4946630897d8c}{custom\+\_\+msg.\+publisher}} = rospy.\+Publisher(\char`\"{}robot\+\_\+informations\char`\"{}, odom\+\_\+custom\+\_\+msg, queue\+\_\+size = 5)
+\begin{DoxyCompactList}\small\item\em Publisher function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{custom__msg_8py_ab89b7bd616c932201d54e4d570b0589c}\label{custom__msg_8py_ab89b7bd616c932201d54e4d570b0589c}} 
+{\bfseries custom\+\_\+msg.\+custom\+\_\+msg} = odom\+\_\+custom\+\_\+msg()
+\item 
+\mbox{\Hypertarget{custom__msg_8py_a5d50486ce8b2f4206ea55e405624a88f}\label{custom__msg_8py_a5d50486ce8b2f4206ea55e405624a88f}} 
+{\bfseries custom\+\_\+msg.\+x}
+\item 
+\mbox{\Hypertarget{custom__msg_8py_a28a6028522f0eaf0fca3bf44cc26883f}\label{custom__msg_8py_a28a6028522f0eaf0fca3bf44cc26883f}} 
+{\bfseries custom\+\_\+msg.\+y}
+\item 
+\mbox{\Hypertarget{custom__msg_8py_aa9b237d7a77c00a9411d45b3bfef6bfc}\label{custom__msg_8py_aa9b237d7a77c00a9411d45b3bfef6bfc}} 
+{\bfseries custom\+\_\+msg.\+vel\+\_\+x}
+\item 
+\mbox{\Hypertarget{custom__msg_8py_af11a8c2d569cd39061830ea2f2430cf8}\label{custom__msg_8py_af11a8c2d569cd39061830ea2f2430cf8}} 
+{\bfseries custom\+\_\+msg.\+vel\+\_\+y}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This node implements the message publisher. 
+
+\begin{DoxyAuthor}{Author}
+Emanuele Giordano -\/ \href{mailto:4479444@studenti.unige.it}{\texttt{ 4479444@studenti.\+unige.\+it}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+29/01/2025
+\end{DoxyDate}
+This is the publisher, that publishes the robot\textquotesingle{}s position and velocity as a custom message, (x,y,vel\+\_\+x,vel\+\_\+y), by relying on the values published in the /odom topic. The user interface is defined in the action\+\_\+client script. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{custom__msg_8py_abc08a89c26f518f035a4946630897d8c}\label{custom__msg_8py_abc08a89c26f518f035a4946630897d8c}} 
+\index{custom\_msg.py@{custom\_msg.py}!publisher@{publisher}}
+\index{publisher@{publisher}!custom\_msg.py@{custom\_msg.py}}
+\doxysubsubsection{\texorpdfstring{publisher}{publisher}}
+{\footnotesize\ttfamily custom\+\_\+msg.\+publisher = rospy.\+Publisher(\char`\"{}robot\+\_\+informations\char`\"{}, odom\+\_\+custom\+\_\+msg, queue\+\_\+size = 5)}
+
+
+
+Publisher function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message,the} & robot\textquotesingle{}s position and velocity vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}

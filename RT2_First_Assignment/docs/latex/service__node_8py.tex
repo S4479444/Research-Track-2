@@ -1,0 +1,83 @@
+\hypertarget{service__node_8py}{}\doxysection{scripts/service\+\_\+node.py File Reference}
+\label{service__node_8py}\index{scripts/service\_node.py@{scripts/service\_node.py}}
+
+
+This package implements the service node.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{service__node_8py_a46ea5eff3aace4f37bab48ceacb49961}\label{service__node_8py_a46ea5eff3aace4f37bab48ceacb49961}} 
+def {\bfseries service\+\_\+node.\+serv\+\_\+node} (request)
+\item 
+\mbox{\Hypertarget{service__node_8py_a9a5515fb721e0409bc1e4370ac552d11}\label{service__node_8py_a9a5515fb721e0409bc1e4370ac552d11}} 
+def {\bfseries service\+\_\+node.\+action\+\_\+server\+\_\+sub} (x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{service__node_8py_a6cc6d9116f224415ab16fb99a09d0807}\label{service__node_8py_a6cc6d9116f224415ab16fb99a09d0807}} 
+int {\bfseries service\+\_\+node.\+reached\+\_\+goals\+\_\+counter} = 0
+\item 
+\mbox{\Hypertarget{service__node_8py_afb00ffc3d1c7ddb967306c518da68f02}\label{service__node_8py_afb00ffc3d1c7ddb967306c518da68f02}} 
+int {\bfseries service\+\_\+node.\+canceled\+\_\+goals\+\_\+counter} = 0
+\item 
+int \mbox{\hyperlink{service__node_8py_a4634237cb51494761f7494249ddc1cb3}{service\+\_\+node.\+sequence}} = 1
+\begin{DoxyCompactList}\small\item\em Service node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{service__node_8py_aa0e0ac9071937f360a2ab8b46b8434e3}{service\+\_\+node.\+file}}
+\begin{DoxyCompactList}\small\item\em Action Server Subscriber. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This package implements the service node. 
+
+\begin{DoxyAuthor}{Author}
+Emanuele Giordano -\/ \href{mailto:4479444@studenti.unige.it}{\texttt{ 4479444@studenti.\+unige.\+it}} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+29/01/2025
+\end{DoxyDate}
+This package implements the service node, which prints the sequence number, as well as the number of reached and canceled goals; it also implements the action server subscriber, which increases the last two numbers by one, everytime the robot is commanded to reach for a target position, or a previously send command is canceled. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{service__node_8py_aa0e0ac9071937f360a2ab8b46b8434e3}\label{service__node_8py_aa0e0ac9071937f360a2ab8b46b8434e3}} 
+\index{service\_node.py@{service\_node.py}!file@{file}}
+\index{file@{file}!service\_node.py@{service\_node.py}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily service\+\_\+node.\+file}
+
+
+
+Action Server Subscriber. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x,status} & of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+This is the action\+\_\+server\+\_\+subscriber, which does the following\+: whenever a goal is canceled, increases the corresponding counter; whenever a goal is reached, does the same thing. \mbox{\Hypertarget{service__node_8py_a4634237cb51494761f7494249ddc1cb3}\label{service__node_8py_a4634237cb51494761f7494249ddc1cb3}} 
+\index{service\_node.py@{service\_node.py}!sequence@{sequence}}
+\index{sequence@{sequence}!service\_node.py@{service\_node.py}}
+\doxysubsubsection{\texorpdfstring{sequence}{sequence}}
+{\footnotesize\ttfamily int service\+\_\+node.\+sequence = 1}
+
+
+
+Service node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Empty\+Response() object
+\end{DoxyReturn}
+The service\+\_\+node class calls the three variables of reached goals, canceled goals and sequence, as global variables, and increases sequence by 1. 
