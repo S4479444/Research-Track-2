@@ -61,7 +61,7 @@ The program will open five windows:
 
 Action client Flowchart :
 ----------------------------
-<img src="https://github.com/S4479444/Research-Track-2/blob/main/RT2_First_Assignment/imgs/Flowchart_Second_Assignment.png" />
+<img src="https://github.com/S4479444/Research-Track-2/blob/main/RT2_First_Assignment/rt1_second_assignment/imgs/Flowchart_Second_Assignment.png" />
 
 
 
